@@ -1,4 +1,4 @@
-<?php if(!defined('BASEPATH'))exit ('No direct script access allowed');
+<?php if(!defined('BASEPATH'))  exit ('No direct script access allowed');
 
 class Active_record extends CI_Controller{
     public function __construct(){
@@ -7,8 +7,7 @@ class Active_record extends CI_Controller{
 
     }
     public function index(){
-        $this->load->view('view_active_record');
-		
+        $this->load->view('view_active_record');	
     }
     public function tambah_user(){
         $data = array('username'=>'staf',

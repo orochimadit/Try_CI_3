@@ -13,10 +13,10 @@ class Model_Karyawan extends CI_Model{
         }
     }
     public function delete_karyawan($id){
-        $this->db->where('id','$id')->delete('karyawan');
+        $this->db->where('id',$id)->delete('karyawan');
     }
     public function get_karyawan_by_id($id){
-        $this->db->where('id','$id')
+        $this->db->where('id',$id)
                 ->limit(1)
                 ->get('karyawan');
         if($hasil->num_rows()>0){
@@ -25,5 +25,8 @@ class Model_Karyawan extends CI_Model{
         else{
             return false;
         }
+    }
+    public function update_karyawan($id,$data){
+        $this->db->where('id',$id)->update('karyawan',$data);
     }
 }
